@@ -51,7 +51,7 @@ function App() {
 
         setLoading(true);
         try {
-          const response = await fetch("http://localhost:3000/integrations/speech-to-text", {
+          const response = await fetch("https://redfish-internal-definitely.ngrok-free.app/integrations/speech-to-text", {
             method: "POST",
             body: formData,
           });
@@ -96,7 +96,7 @@ function App() {
     setWalkupLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/integrations/text-to-speech", {
+      const response = await fetch("https://redfish-internal-definitely.ngrok-free.app/integrations/text-to-speech", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: walkupText }),
